@@ -1,0 +1,15 @@
+C:\Users\amand\Desktop\Practica\Senai\UC12\Encontro Remoto\bin\Debug\net6.0\Encontro Remoto.exe
+C:\Users\amand\Desktop\Practica\Senai\UC12\Encontro Remoto\bin\Debug\net6.0\Encontro Remoto.deps.json
+C:\Users\amand\Desktop\Practica\Senai\UC12\Encontro Remoto\bin\Debug\net6.0\Encontro Remoto.runtimeconfig.json
+C:\Users\amand\Desktop\Practica\Senai\UC12\Encontro Remoto\bin\Debug\net6.0\Encontro Remoto.dll
+C:\Users\amand\Desktop\Practica\Senai\UC12\Encontro Remoto\bin\Debug\net6.0\Encontro Remoto.pdb
+C:\Users\amand\Desktop\Practica\Senai\UC12\Encontro Remoto\obj\Debug\net6.0\Encontro Remoto.csproj.AssemblyReference.cache
+C:\Users\amand\Desktop\Practica\Senai\UC12\Encontro Remoto\obj\Debug\net6.0\Encontro Remoto.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\amand\Desktop\Practica\Senai\UC12\Encontro Remoto\obj\Debug\net6.0\Encontro Remoto.AssemblyInfoInputs.cache
+C:\Users\amand\Desktop\Practica\Senai\UC12\Encontro Remoto\obj\Debug\net6.0\Encontro Remoto.AssemblyInfo.cs
+C:\Users\amand\Desktop\Practica\Senai\UC12\Encontro Remoto\obj\Debug\net6.0\Encontro Remoto.csproj.CoreCompileInputs.cache
+C:\Users\amand\Desktop\Practica\Senai\UC12\Encontro Remoto\obj\Debug\net6.0\Encontro Remoto.dll
+C:\Users\amand\Desktop\Practica\Senai\UC12\Encontro Remoto\obj\Debug\net6.0\refint\Encontro Remoto.dll
+C:\Users\amand\Desktop\Practica\Senai\UC12\Encontro Remoto\obj\Debug\net6.0\Encontro Remoto.pdb
+C:\Users\amand\Desktop\Practica\Senai\UC12\Encontro Remoto\obj\Debug\net6.0\Encontro Remoto.genruntimeconfig.cache
+C:\Users\amand\Desktop\Practica\Senai\UC12\Encontro Remoto\obj\Debug\net6.0\ref\Encontro Remoto.dll
