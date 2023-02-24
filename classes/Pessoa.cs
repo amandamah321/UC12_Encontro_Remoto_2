@@ -8,7 +8,7 @@ namespace Encontro_Remoto.classes
 
         public int rendimento { get; set; }
 
-        public Endereco? end { get; set; }
+        public Endereco? endereco { get; set; }
 
 
 

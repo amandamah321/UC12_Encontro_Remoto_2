@@ -39,9 +39,45 @@ namespace Encontro_Remoto.classes
 
         }
 
-        bool IPessoaFisica.ValidarDataNasc(DateTime dataNasc)
+        public bool ValidarDataNasc(DateTime dataNasc)
         {
+            DateTime dataAtual = DateTime.Today;
+
+            double anos = (dataAtual - dataNasc).TotalDays / 365;
+
+            Console.WriteLine(anos);
+
+            if (anos >= 18)
+            {
+                return true;
+
+            }
+
+            return false;
+        }
+
+        public bool ValidarDataNasc(string dataNasc)
+        {
+            if (DateTime.TryParse(dataNasc, out DateTime dataConvertida))
+            {
+                DateTime dataAtual = DateTime.Today;
+
+                double anos = (dataAtual - dataConvertida).TotalDays / 365;
+
+                Console.WriteLine(anos);
+
+                if (anos >= 18)
+                {
+                    return true;
+
+                }
+            }
+
+            return false;
+
             throw new NotImplementedException();
         }
+
+
     }
 }
