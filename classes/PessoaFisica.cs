@@ -45,7 +45,7 @@ namespace Encontro_Remoto.classes
 
             double anos = (dataAtual - dataNasc).TotalDays / 365;
 
-            Console.WriteLine(anos);
+            //Console.WriteLine(anos);
 
             if (anos >= 18)
             {
@@ -64,7 +64,7 @@ namespace Encontro_Remoto.classes
 
                 double anos = (dataAtual - dataConvertida).TotalDays / 365;
 
-                Console.WriteLine(anos);
+                //Console.WriteLine(anos);
 
                 if (anos >= 18)
                 {

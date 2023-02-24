@@ -28,28 +28,28 @@ Maior de idade: {novaPf.ValidarDataNasc(novaPf.dataNasc)}
 //----------------------------------------------------------------
 
 
-Console.WriteLine(novaPf.nome);
+// Console.WriteLine(novaPf.nome);
 
 
-Console.WriteLine($"Nome: {novaPf.nome} - CPF: {novaPf.cpf}");
+// Console.WriteLine($"Nome: {novaPf.nome} - CPF: {novaPf.cpf}");
 
 
-float impostoPagar = novaPf.calcularImposto(novaPf.rendimento);
+// float impostoPagar = novaPf.calcularImposto(novaPf.rendimento);
 
-Console.WriteLine(impostoPagar);
+// Console.WriteLine(impostoPagar);
 
-Console.WriteLine($"R$ {impostoPagar: 0.00}");
+// Console.WriteLine($"R$ {impostoPagar: 0.00}");
 
-/*-------------------------------------------------------------*/
+// /*-------------------------------------------------------------*/
 
-PessoaJuridica novaPj = new PessoaJuridica();
-Console.WriteLine(novaPj.calcularImposto(6600.5f));
+// PessoaJuridica novaPj = new PessoaJuridica();
+// Console.WriteLine(novaPj.calcularImposto(6600.5f));
 
-/*-------------------------------------------------------------*/
+// /*-------------------------------------------------------------*/
 
 
-DateTime temp = new DateTime(2000, 01, 01);
-Console.WriteLine(novaPf.ValidarDataNasc("01/01/2006"));
+// DateTime temp = new DateTime(2000, 01, 01);
+// Console.WriteLine(novaPf.ValidarDataNasc("01/01/2006"));
 
 
 
