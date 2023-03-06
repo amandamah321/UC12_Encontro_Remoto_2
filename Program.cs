@@ -3,7 +3,38 @@
 PessoaFisica novaPf = new PessoaFisica();
 Endereco novoEndPF = new Endereco();
 
-novaPf.nome = "Amanda";
+
+//Console.WriteLine(novoPj.ValidarCnpj("123655498462198484"));
+
+PessoaJuridica novoPj = new PessoaJuridica();
+Endereco novoEndPj = new Endereco();
+
+novoPj.nome = "Amanda";
+novoPj.cnpj = "4564651131357";
+novoPj.rendimento = 6000;
+
+
+novoEndPj.logradouro = "Rua Flores";
+novoEndPj.numero = 180;
+novoEndPj.complemento = "Escola Sesi";
+novoEndPj.endComercial = true;
+
+Console.WriteLine(@$"
+Nome: {novoPj.nome}
+Endereço: {novoEndPj.logradouro}, Número: {novoEndPj.numero}
+CNPJ: {novoPj.cnpj} - valido: {Console.WriteLine(novoPj.ValidarCnpj("123655498462198484"))}
+");
+
+
+
+//var cnpj = 76773415000160;
+//novoPj.ValidarCnpj(cnpj);
+
+
+
+
+
+/*novaPf.nome = "Amanda";
 novaPf.cpf = "4564651131357";
 novaPf.rendimento = 6000;
 novaPf.dataNasc = new DateTime(2000, 01, 01);
@@ -19,9 +50,7 @@ novaPf.endereco = novoEndPF;
 Console.WriteLine(@$"
 Nome: {novaPf.nome}
 Endereço: {novoEndPF.logradouro}, Número: {novoEndPF.numero}
-Maior de idade: {novaPf.ValidarDataNasc(novaPf.dataNasc)}
-
-");
+Maior de idade: {novaPf.ValidarDataNasc(novaPf.dataNasc)}"); */
 
 
 
