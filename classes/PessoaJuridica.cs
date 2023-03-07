@@ -30,7 +30,7 @@ namespace Encontro_Remoto.classes
 
         }
 
-        public bool ValidarCnpj(string cnpj)
+        public bool? ValidarCnpj(string cnpj)
         {
             bool retornoCnpjValido = Regex.IsMatch(cnpj, @"^(\d{14})|(\d {2}.\d{3}.\{3}./\d{4}-\d{2}.)$");
 
@@ -42,7 +42,7 @@ namespace Encontro_Remoto.classes
                 {
                     return true;
                 }
-                // CONTINUAR EM 2:03:34 
+
             }
 
 
@@ -57,6 +57,11 @@ namespace Encontro_Remoto.classes
             return false;
 
 
+        }
+
+        bool IPessoaJuridica.ValidarCnpj(string cnpj)
+        {
+            throw new NotImplementedException();
         }
     }
 }

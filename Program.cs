@@ -1,29 +1,60 @@
 ﻿using Encontro_Remoto.classes;
 
-PessoaFisica novaPf = new PessoaFisica();
-Endereco novoEndPF = new Endereco();
+Console.WriteLine(@$"
+
+
+            =================================================
+            | Bem vindo  ao sistema de cadastro de Pessoas  |
+            =================================================
+
+");
+//CONTINUAR EM 39 MIN
+Console.WriteLine($"Carregando");
+Thread.Sleep(1000);
+Console.Write($"*");
+Thread.Sleep(1000);
+Console.Write($"*");
+Thread.Sleep(1000);
+Console.Write($"*");
+Thread.Sleep(1000);
+Console.Write($"*");
+Thread.Sleep(1000);
+Console.Write($"*");
+Thread.Sleep(1000);
+Console.Write($"*");
+Thread.Sleep(1000);
+Console.Write($"*");
+Thread.Sleep(1000);
+Console.Write($"*");
+Thread.Sleep(1000);
+Console.Write($"*");
+
+/*PessoaFisica novaPf = new PessoaFisica();
+Endereco novoEndPF = new Endereco();*/
 
 
 //Console.WriteLine(novoPj.ValidarCnpj("123655498462198484"));
 
-PessoaJuridica novoPj = new PessoaJuridica();
-Endereco novoEndPj = new Endereco();
+// PessoaJuridica novoPj = new PessoaJuridica();
+// Endereco novoEndPj = new Endereco();
 
-novoPj.nome = "Amanda";
-novoPj.cnpj = "4564651131357";
-novoPj.rendimento = 6000;
+// novoPj.nome = "Amanda";
+// novoPj.cnpj = "4564651131357";
+// novoPj.rendimento = 6000;
 
 
-novoEndPj.logradouro = "Rua Flores";
-novoEndPj.numero = 180;
-novoEndPj.complemento = "Escola Sesi";
-novoEndPj.endComercial = true;
+// novoEndPj.logradouro = "Rua Flores";
+// novoEndPj.numero = 180;
+// novoEndPj.complemento = "Escola Sesi";
+// novoEndPj.endComercial = true;
 
-Console.WriteLine(@$"
-Nome: {novoPj.nome}
-Endereço: {novoEndPj.logradouro}, Número: {novoEndPj.numero}
-CNPJ: {novoPj.cnpj} - valido: {Console.WriteLine(novoPj.ValidarCnpj("123655498462198484"))}
-");
+// novoPj.endereco = novoEndPj;
+
+// Console.WriteLine(@$"
+// Nome: {novoPj.nome}
+// Endereço: {novoEndPj.logradouro}, Número: {novoEndPj.numero}
+// CNPJ: {novoPj.cnpj} - valido: {novoPj.ValidarCnpj("123655498462198484")}
+// ");
 
 
 
