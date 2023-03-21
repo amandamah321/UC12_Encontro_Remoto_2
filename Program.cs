@@ -1,5 +1,8 @@
 ﻿using Encontro_Remoto.classes;
 
+List<PessoaJuridica> listaPj = new List<PessoaJuridica>();
+
+
 Utils.BarraCarregamento("Carregando");
 Console.Clear();
 
@@ -14,6 +17,7 @@ Console.WriteLine(@$"
 Thread.Sleep(2500);
 
 string? opcao;
+string? opcaoPj;
 
 Console.ForegroundColor = ConsoleColor.Red;
 
@@ -54,30 +58,135 @@ do
     switch (opcao)
     {
         case "1":
-            //PESSOA JURIDICA***************************
 
-            PessoaJuridica novoPj = new PessoaJuridica();
-            Endereco novoEndPj = new Endereco();
+            do
 
-            Console.WriteLine(novoPj.ValidarCnpj("123655498462198484"));
-
-            novoPj.nome = "Amanda";
-            novoPj.cnpj = "4564651131357";
-            novoPj.rendimento = 6000;
+            {
 
 
-            novoEndPj.logradouro = "Rua Flores";
-            novoEndPj.numero = 180;
-            novoEndPj.complemento = "Escola Sesi";
-            novoEndPj.endComercial = true;
 
-            novoPj.endereco = novoEndPj;
+                Console.Clear();
+                Console.Write(@$"
 
-            Console.WriteLine(@$"
-            Nome: {novoPj.nome}
-            Endereço: {novoEndPj.logradouro}, Número: {novoEndPj.numero}
-            CNPJ: {novoPj.cnpj} - valido: {novoPj.ValidarCnpj("123655498462198484")}
-            ");
+            =================================================
+            |            Escolha uma opção abaixo :         |
+            =================================================
+            |                                               |
+            |        1- Cadastrar Pessoa  Jurídica          |
+            |          2- Listar Pessoa  Jurídica           |
+            |                                               |
+            |         0 - Voltar ao Menu anterior           |
+            |                                               |
+            =================================================
+        ");
+
+                opcaoPj = Console.ReadLine();
+
+                switch (opcaoPj)
+                {
+                    case "1":
+
+                        PessoaJuridica novoPj = new PessoaJuridica();
+                        Endereco novoEndPj = new Endereco();
+
+                        Console.Clear();
+                        Console.WriteLine($"Digite o nome da Razão Social");
+                        novoPj.razaoSocial = Console.ReadLine();
+
+                        Console.WriteLine($"Digite o CNPJ da empresa");
+                        novoPj.cnpj = Console.ReadLine();
+
+                        Console.WriteLine($"Digite o rendimento da empresa");
+                        string? rendEntrada = Console.ReadLine();
+
+                        float.TryParse(rendEntrada, out float rendConvertido);
+                        novoPj.rendimento = (int)rendConvertido;
+
+
+                        Console.WriteLine($"Digite o nome da Rua");
+                        novoEndPj.logradouro = Console.ReadLine();
+
+                        Console.WriteLine($"Digite o número do imóvel");
+                        string? numEntrada = Console.ReadLine();
+                        int.TryParse(numEntrada, out int numConvertido);
+                        novoEndPj.numero = numConvertido;
+
+                        novoPj.endereco = novoEndPj;
+
+                        listaPj.Add(novoPj);
+
+                        Console.WriteLine($"Cadastro realizado com sucesso");
+                        Console.WriteLine($"Pressione qualquer tecla para continuar");
+                        Console.ReadLine();
+
+
+
+                        /* novoPj.nome = "Amanda";
+                         novoPj.cnpj = "4564651131357";
+                         novoPj.rendimento = 6000;
+
+
+                         novoEndPj.logradouro = "Rua Flores";
+                         novoEndPj.numero = 180;
+                         novoEndPj.complemento = "Escola Sesi";
+                         novoEndPj.endComercial = true;
+
+                         */
+                        Thread.Sleep(500);
+                        break;
+
+                    case "2":
+
+                        Console.Clear();
+
+
+                        if (listaPj.Count > 0)
+                        {
+                            foreach (PessoaJuridica cadaPj in listaPj)
+                            {
+
+                                Console.Clear();
+
+
+                                Console.WriteLine(@$"
+                            Nome da Razão Social: {cadaPj.nome}
+                            Endereço: {cadaPj.endereco.logradouro}, Número: {cadaPj.endereco.numero}
+                            CNPJ: {cadaPj.cnpj} - valido: {cadaPj.ValidarCnpj(cadaPj.cnpj)}
+                            ");
+
+                                Console.WriteLine($"Pressione qualquer tecla para continuar");
+                                Console.ReadLine();
+
+                            }
+                        }
+                        else
+                        {
+
+                            Console.WriteLine($"Sem dados para exibir, lista vazia");
+                            Thread.Sleep(3000);
+                        }
+
+
+
+
+
+                        Thread.Sleep(500);
+                        break;
+
+                    case "0":
+                        Console.WriteLine("Voltando ao menu inicial");
+
+                        break;
+
+                    default:
+                        Console.WriteLine($"digite o valor  correto");
+                        Thread.Sleep(2500);
+                        break;
+                }
+
+            } while (opcaoPj != "0");
+
+            Thread.Sleep(500);
 
             Thread.Sleep(2500);
             break;
