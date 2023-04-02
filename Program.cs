@@ -90,10 +90,22 @@ do
                         Endereco novoEndPj = new Endereco();
 
                         Console.Clear();
-                        Console.WriteLine($"Digite o nome da Razão Social");
-                        novoPj.razaoSocial = Console.ReadLine();
+                        // Console.WriteLine($"Digite o nome da Razão Social");
+                        // novoPj.razaoSocial = Console.ReadLine();
 
-                        Console.WriteLine($"Digite o CNPJ da empresa");
+                        //StreamWriter sw = new StreamWriter($"{novoPj.razaoSocial}.txt");
+                        //sw.WriteLine(novoPj.razaoSocial);
+                        //sw.Close();
+
+                        using (StreamWriter sw = new StreamWriter($"{novoPj.razaoSocial}.txt"))
+                        {
+                            sw.WriteLine(novoPj.razaoSocial);
+                        }
+
+
+
+
+                        /*Console.WriteLine($"Digite o CNPJ da empresa");
                         novoPj.cnpj = Console.ReadLine();
 
                         Console.WriteLine($"Digite o rendimento da empresa");
@@ -101,6 +113,7 @@ do
 
                         float.TryParse(rendEntrada, out float rendConvertido);
                         novoPj.rendimento = (int)rendConvertido;
+
 
 
                         Console.WriteLine($"Digite o nome da Rua");
@@ -117,60 +130,95 @@ do
 
                         Console.WriteLine($"Cadastro realizado com sucesso");
                         Console.WriteLine($"Pressione qualquer tecla para continuar");
-                        Console.ReadLine();
+                        Console.ReadLine();*/
 
 
 
-                        /* novoPj.nome = "Amanda";
-                         novoPj.cnpj = "4564651131357";
-                         novoPj.rendimento = 6000;
+                        novoPj.razaoSocial = "Sesc-Me Polo 1";
+                        novoPj.cnpj = "45.646.511/0001-02";
+
+                        novoPj.Inserir(novoPj);
+                        // novoPj.rendimento = 6000;
 
 
-                         novoEndPj.logradouro = "Rua Flores";
-                         novoEndPj.numero = 180;
-                         novoEndPj.complemento = "Escola Sesi";
-                         novoEndPj.endComercial = true;
+                        // novoEndPj.logradouro = "Rua Flores";
+                        // novoEndPj.numero = 180;
+                        // novoEndPj.complemento = "Escola Sesi";
+                        // novoEndPj.endComercial = true;
 
-                         */
-                        Thread.Sleep(500);
+                        // Thread.Sleep(500);
+
+                        // Console.WriteLine($"Cadastro ok");
+                        // Console.ReadLine();
+
                         break;
 
                     case "2":
 
                         Console.Clear();
 
+                        // using (StreamReader sr = new StreamReader("Senai-Me.txt"))
+                        // {
+                        //     string linha;
+                        //     while (sr.ReadLine() != null)
+                        //     {
+                        //         linha = sr.ReadLine();
+                        //         Console.WriteLine($"{linha}");
+                        //     };
 
-                        if (listaPj.Count > 0)
+                        PessoaJuridica novaPj2 = new PessoaJuridica();
+                        List<PessoaJuridica> listaExibicaoPj = novaPj2.LerArquivo();
+
+                        foreach (var cadaItem in listaExibicaoPj)
                         {
-                            foreach (PessoaJuridica cadaPj in listaPj)
-                            {
 
-                                Console.Clear();
+                            Console.WriteLine(@$"
+                            
+                            Razão Social: {cadaItem.razaoSocial}
+                            CNPJ: {cadaItem.cnpj}
+                                                                      
 
-
-                                Console.WriteLine(@$"
-                            Nome da Razão Social: {cadaPj.nome}
-                            Endereço: {cadaPj.endereco.logradouro}, Número: {cadaPj.endereco.numero}
-                            CNPJ: {cadaPj.cnpj} - valido: {cadaPj.ValidarCnpj(cadaPj.cnpj)}
                             ");
 
-                                Console.WriteLine($"Pressione qualquer tecla para continuar");
-                                Console.ReadLine();
+                            Console.WriteLine($"Linha ok, Enter para continuar");
+                            Console.ReadLine();
+                            Console.Clear();
 
-                            }
-                        }
-                        else
-                        {
-
-                            Console.WriteLine($"Sem dados para exibir, lista vazia");
-                            Thread.Sleep(3000);
                         }
 
+                        Console.WriteLine($"Leitura Completa");
+                        Console.ReadLine();
+                        Console.Clear();
+
+                        // }
+
+                        // if (listaPj.Count > 0)
+                        // {
+                        //     foreach (PessoaJuridica cadaPj in listaPj)
+                        //     {
+
+                        //         Console.Clear();
 
 
+                        //         Console.WriteLine(@$"
+                        //     Nome da Razão Social: {cadaPj.nome}
+                        //     Endereço: {cadaPj.endereco.logradouro}, Número: {cadaPj.endereco.numero}
+                        //     CNPJ: {cadaPj.cnpj} - valido: {cadaPj.ValidarCnpj(cadaPj.cnpj)}
+                        //     ");
 
+                        //         Console.WriteLine($"Pressione qualquer tecla para continuar");
+                        //         Console.ReadLine();
 
-                        Thread.Sleep(500);
+                        //     }
+                        // }
+                        // else
+                        // {
+
+                        //     Console.WriteLine($"Sem dados para exibir, lista vazia");
+                        //     Thread.Sleep(3000);
+                        // }
+
+                        // Thread.Sleep(500);
                         break;
 
                     case "0":
@@ -229,8 +277,6 @@ do
     }
 
 } while (opcao != "0");
-
-
 
 
 
